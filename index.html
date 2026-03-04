@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ram | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Ramchander Venugopal - software engineer, projects, skills, and resume highlights."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+
+    <header class="hero container" id="top">
+      <p class="eyebrow">Portfolio</p>
+      <h1 id="name">Ramchander Venugopal</h1>
+      <p class="hero-sub" id="bio">Building reliable products with practical engineering.</p>
+      <div class="hero-meta">
+        <span id="location">Phoenix, USA</span>
+        <a id="github-link" href="https://github.com/helloram30" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="stats-panel reveal" aria-label="GitHub stats">
+        <article>
+          <h2 id="repo-count">-</h2>
+          <p>Public Repositories</p>
+        </article>
+        <article>
+          <h2 id="followers">-</h2>
+          <p>Followers</p>
+        </article>
+        <article>
+          <h2 id="following">-</h2>
+          <p>Following</p>
+        </article>
+      </section>
+
+      <section id="projects" class="section reveal" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Selected Projects</h2>
+          <p>Curated content, synced from GitHub repositories.</p>
+        </div>
+        <div id="projects-grid" class="projects-grid" role="list"></div>
+      </section>
+
+      <section id="resume" class="section reveal" aria-labelledby="resume-title">
+        <div class="section-head">
+          <h2 id="resume-title">Resume Snapshot</h2>
+          <p>Highlights are parsed from your local resume PDF on page load.</p>
+        </div>
+
+        <div class="resume-wrap">
+          <div>
+            <h3 class="subheading">Detected Skills</h3>
+            <ul id="skills-list" class="chips" aria-live="polite"></ul>
+            <h3 class="subheading">Quick Highlights</h3>
+            <ul id="resume-highlights" class="highlights" aria-live="polite"></ul>
+          </div>
+          <aside class="resume-actions">
+            <a
+              href="Ramchander Venugopal - Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              class="button"
+              >Open Resume PDF</a
+            >
+            <p class="small" id="resume-status">Reading resume content...</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal" aria-labelledby="contact-title">
+        <div class="section-head">
+          <h2 id="contact-title">Contact</h2>
+          <p>Open to impactful engineering opportunities.</p>
+        </div>
+        <div class="contact-grid">
+          <a id="contact-email" class="contact-item" href="mailto:helloram30@gmail.com">
+            <span>Email</span>
+            <strong>helloram30@gmail.com</strong>
+          </a>
+          <a
+            id="contact-github"
+            class="contact-item"
+            href="https://github.com/helloram30"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>GitHub</span>
+            <strong>github.com/helloram30</strong>
+          </a>
+          <a
+            id="contact-linkedin"
+            class="contact-item"
+            href="https://www.linkedin.com/in/helloram30"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>LinkedIn</span>
+            <strong>linkedin.com/in/helloram30</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> Ramchander Venugopal</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
