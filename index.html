@@ -6,119 +6,118 @@
     <title>Ram | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Ramchander Venugopal - software engineer, projects, skills, and resume highlights."
+      content="Terminal-inspired portfolio for Ramchander Venugopal, synced from GitHub and resume data."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-shape bg-shape-a"></div>
-    <div class="bg-shape bg-shape-b"></div>
+    <div class="backdrop" aria-hidden="true"></div>
 
-    <header class="hero container" id="top">
-      <p class="eyebrow">Portfolio</p>
-      <h1 id="name">Ramchander Venugopal</h1>
-      <p class="hero-sub" id="bio">Building reliable products with practical engineering.</p>
-      <div class="hero-meta">
-        <span id="location">Phoenix, USA</span>
-        <a id="github-link" href="https://github.com/helloram30" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-      </div>
+    <header class="topline container">
+      <a href="#top" id="brand-name" class="host">guest@ram.dev</a>
+      <nav aria-label="Primary navigation" class="nav">
+        <a href="#bio">/bio</a>
+        <a href="#projects">/projects</a>
+        <a href="#resume">/resume</a>
+        <a href="#contact">/contact</a>
+      </nav>
     </header>
 
-    <main class="container">
-      <section class="stats-panel reveal" aria-label="GitHub stats">
-        <article>
-          <h2 id="repo-count">-</h2>
-          <p>Public Repositories</p>
-        </article>
-        <article>
-          <h2 id="followers">-</h2>
-          <p>Followers</p>
-        </article>
-        <article>
-          <h2 id="following">-</h2>
-          <p>Following</p>
-        </article>
+    <main class="container shell" id="top">
+      <section id="bio" class="block reveal" aria-labelledby="hero-title">
+        <p class="prompt">$ cat /bio</p>
+        <h1 id="hero-title">Hi, I'm Ram.</h1>
+        <p id="bio-text" class="copy">Loading profile details...</p>
+        <div class="inline-meta">
+          <span id="location">Phoenix, USA</span>
+          <a id="github-link" href="https://github.com/helloram30" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="Ramchander Venugopal - Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+        </div>
       </section>
 
-      <section id="projects" class="section reveal" aria-labelledby="projects-title">
-        <div class="section-head">
-          <h2 id="projects-title">Selected Projects</h2>
-          <p>Curated content, synced from GitHub repositories.</p>
+      <section class="block reveal" aria-label="GitHub metrics">
+        <p class="prompt">$ cat /stats</p>
+        <div class="stats-grid">
+          <article>
+            <span>repos</span>
+            <strong id="repo-count">-</strong>
+          </article>
+          <article>
+            <span>followers</span>
+            <strong id="followers">-</strong>
+          </article>
+          <article>
+            <span>following</span>
+            <strong id="following">-</strong>
+          </article>
+          <article>
+            <span>focus</span>
+            <strong id="focus-area">web + ml</strong>
+          </article>
         </div>
-        <div id="projects-grid" class="projects-grid" role="list"></div>
       </section>
 
-      <section id="resume" class="section reveal" aria-labelledby="resume-title">
-        <div class="section-head">
-          <h2 id="resume-title">Resume Snapshot</h2>
-          <p>Highlights are parsed from your local resume PDF on page load.</p>
-        </div>
+      <section id="projects" class="block reveal" aria-labelledby="projects-title">
+        <p class="prompt">$ ls /projects</p>
+        <h2 id="projects-title">Selected repositories</h2>
+        <p class="copy small-copy">Auto-synced from GitHub and ranked by activity + impact.</p>
 
-        <div class="resume-wrap">
-          <div>
-            <h3 class="subheading">Detected Skills</h3>
-            <ul id="skills-list" class="chips" aria-live="polite"></ul>
-            <h3 class="subheading">Quick Highlights</h3>
-            <ul id="resume-highlights" class="highlights" aria-live="polite"></ul>
-          </div>
-          <aside class="resume-actions">
-            <a
-              href="Ramchander Venugopal - Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              class="button"
-              >Open Resume PDF</a
-            >
-            <p class="small" id="resume-status">Reading resume content...</p>
+        <div class="project-layout">
+          <ul id="projects-list" class="project-list" role="list"></ul>
+
+          <aside class="project-detail" aria-live="polite">
+            <p class="prompt muted">$ cat /projects/selected</p>
+            <h3 id="selected-project-name">Choose a repository</h3>
+            <p id="selected-project-description" class="copy">Select a project from the list to inspect details.</p>
+            <ul id="selected-project-meta" class="meta-list"></ul>
+            <a id="selected-project-link" href="#" target="_blank" rel="noreferrer">open repository</a>
           </aside>
         </div>
       </section>
 
-      <section id="contact" class="section reveal" aria-labelledby="contact-title">
-        <div class="section-head">
-          <h2 id="contact-title">Contact</h2>
-          <p>Open to impactful engineering opportunities.</p>
+      <section id="resume" class="block reveal" aria-labelledby="resume-title">
+        <p class="prompt">$ cat /resume</p>
+        <h2 id="resume-title">Resume insights</h2>
+        <p class="small-copy" id="resume-status">Reading resume content...</p>
+
+        <div class="resume-layout">
+          <article>
+            <h3>skills</h3>
+            <ul id="skills-list" class="chip-list" aria-live="polite"></ul>
+          </article>
+          <article>
+            <h3>highlights</h3>
+            <ul id="resume-highlights" class="highlights" aria-live="polite"></ul>
+          </article>
         </div>
-        <div class="contact-grid">
-          <a id="contact-email" class="contact-item" href="mailto:helloram30@gmail.com">
-            <span>Email</span>
-            <strong>helloram30@gmail.com</strong>
-          </a>
-          <a
-            id="contact-github"
-            class="contact-item"
-            href="https://github.com/helloram30"
-            target="_blank"
-            rel="noreferrer"
+      </section>
+
+      <section id="contact" class="block reveal" aria-labelledby="contact-title">
+        <p class="prompt">$ cat /contact</p>
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-list">
+          <a id="contact-email" href="mailto:helloram30@gmail.com">email: <strong>helloram30@gmail.com</strong></a>
+          <a id="contact-github" href="https://github.com/helloram30" target="_blank" rel="noreferrer"
+            >github: <strong>github.com/helloram30</strong></a
           >
-            <span>GitHub</span>
-            <strong>github.com/helloram30</strong>
-          </a>
           <a
             id="contact-linkedin"
-            class="contact-item"
             href="https://www.linkedin.com/in/helloram30"
             target="_blank"
             rel="noreferrer"
+            >linkedin: <strong>linkedin.com/in/helloram30</strong></a
           >
-            <span>LinkedIn</span>
-            <strong>linkedin.com/in/helloram30</strong>
-          </a>
         </div>
       </section>
     </main>
 
-    <footer class="container footer">
-      <p>© <span id="year"></span> Ramchander Venugopal</p>
-    </footer>
+    <footer class="container footer">© <span id="year"></span> Ramchander Venugopal</footer>
 
     <script type="module" src="app.js"></script>
   </body>
